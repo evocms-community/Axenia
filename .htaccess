@@ -16,5 +16,3 @@ RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
 # fix for infinite loop
 RewriteCond %{ENV:REDIRECT_STATUS} 100
 RewriteRule .* - [L]
-
-php_value error_log /home/smtauto/domains/karmatest.chrge.ru/php.log
