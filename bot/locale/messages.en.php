@@ -33,6 +33,7 @@ Also I understand messages in format like \"+ @username\" and etc.\r\n
 "karma.antitop.row" => ":username (:karma)\r\n",
 "karma.antitop.firstrow" => "💩 :username (:karma)\r\n",
 "karma.antitop.private" => "The Karma's antitop is available only in groups",
+"karma.antitop.empty" => "There are only good people in this chat 🐈",
 "karma.plus" => "<b>:from (:k1)</b> has given some karma points to <b>:to (:k2)</b>",
 "karma.minus" => "<b>:from (:k1)</b> has taken some karma points from <b>:to (:k2)</b>",
 "karma.yourself" => "Do not do it again, please!",

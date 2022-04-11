@@ -417,14 +417,15 @@ class BotService
 
     public function getAntitop($chat_id, $limit = 10)
     {
-        $out = Lang::message('karma.antitop.title', [
-            "chatName" => $this->db->getGroupName($chat_id)
-        ]);
-
         $top = $this->db->getAntitop($chat_id, $limit);
+        if (count($top) === 0) return Lang::message('karma.antitop.empty');
 
         $a = array_chunk($top, 4);
         $i = 0;
+
+        $out = Lang::message('karma.antitop.title', [
+            "chatName" => $this->db->getGroupName($chat_id)
+        ]);
 
         foreach ($a as $value) {
             $username = ($value[0] == "") ? htmlspecialchars($value[1] . " " . $value[2]) : "<a href='tg://resolve?domain=$value[0]'>$value[0]</a>";

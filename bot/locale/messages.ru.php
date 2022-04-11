@@ -32,6 +32,7 @@
 "karma.antitop.row" => ":username (:karma)\r\n",
 "karma.antitop.firstrow" => "💩 :username (:karma)\r\n",
 "karma.antitop.private" => "Топ антикармы доступен только в групповых чатах.",
+"karma.antitop.empty" => "В чате все хорошие 🐈",
 "karma.plus" => "<b>:from (:k1)</b> увеличил карму <b>:to (:k2)</b>",
 "karma.minus" => "<b>:from (:k1)</b> уменьшил карму <b>:to (:k2)</b>",
 "karma.yourself" => "Больше так не делай",
