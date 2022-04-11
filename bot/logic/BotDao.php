@@ -301,8 +301,20 @@ class BotDao extends AbstractDao
         SELECT u.username, u.firstname, u.lastname, k.level
         FROM karma AS k, users AS u
         WHERE k.user_id=u.id AND k.level<>0 AND k.chat_id='" . $chat_id . "'
-        ORDER BY level
-        DESC LIMIT " . $limit;
+        ORDER BY level DESC
+        LIMIT " . $limit;
+
+        return $this->select($query);
+    }
+
+    public function getAntitop($chat_id, $limit = 5)
+    {
+        $query = "
+        SELECT u.username, u.firstname, u.lastname, k.level
+        FROM karma AS k, users AS u
+        WHERE k.user_id=u.id AND k.level<>0 AND k.chat_id='" . $chat_id . "'
+        ORDER BY level ASC
+        LIMIT " . $limit;
 
         return $this->select($query);
     }

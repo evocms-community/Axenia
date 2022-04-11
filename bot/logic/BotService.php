@@ -415,6 +415,28 @@ class BotService
         return $out;
     }
 
+    public function getAntitop($chat_id, $limit = 10)
+    {
+        $out = Lang::message('karma.antitop.title', [
+            "chatName" => $this->db->getGroupName($chat_id)
+        ]);
+
+        $top = $this->db->getAntitop($chat_id, $limit);
+
+        $a = array_chunk($top, 4);
+        $i = 0;
+
+        foreach ($a as $value) {
+            $username = ($value[0] == "") ? htmlspecialchars($value[1] . " " . $value[2]) : "<a href='tg://resolve?domain=$value[0]'>$value[0]</a>";
+            $out .= Lang::message('karma.antitop.' . ($i == 0 ? "firstrow" : "row"), [
+                "username" => $username, "karma" => $value[3]
+            ]);
+            $i++;
+        }
+
+        return $out;
+    }
+
     public function setLevelByUsername($username, $chat_id, $newLevel)
     {
         $user_id = $this->db->getUserID($username);

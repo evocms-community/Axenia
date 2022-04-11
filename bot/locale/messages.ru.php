@@ -11,6 +11,7 @@
 Также понимаю сообщение формата \"+ @username\" и тому подобное.\r\n
 <b>Команды</b>
 /top - топ кармы в этой группе
+/antitop - топ отрицательной кармы в этой группе
 /mystats - своя глобальная статистика кармы
 /settings - настройки: смена языка, переключение режима не комментирования (тихий режим) и смена таймера между командами пользователя",
 "chat.notallowed" => "Этот чат не добавлен в список",
@@ -26,7 +27,11 @@
 "karma.top.title" => "<b>🏆 Самые почётные люди группы «:chatName»:</b>\r\n\r\n",
 "karma.top.row" => ":username (:karma)\r\n",
 "karma.top.firstrow" => "⭐ :username (:karma)\r\n",
-"karma.top.private" => "Топ кармы доступен только в групповых чатах.",
+"karma.top.private" => "Топ антикармы доступен только в групповых чатах.",
+"karma.antitop.title" => "<b>🏆 Самые непочётные люди группы «:chatName»:</b>\r\n\r\n",
+"karma.antitop.row" => ":username (:karma)\r\n",
+"karma.antitop.firstrow" => "💩 :username (:karma)\r\n",
+"karma.antitop.private" => "Топ антикармы доступен только в групповых чатах.",
 "karma.plus" => "<b>:from (:k1)</b> увеличил карму <b>:to (:k2)</b>",
 "karma.minus" => "<b>:from (:k1)</b> уменьшил карму <b>:to (:k2)</b>",
 "karma.yourself" => "Больше так не делай",
