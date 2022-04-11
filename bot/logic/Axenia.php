@@ -144,6 +144,18 @@ class Axenia
                         }
                         break;
 
+                    // топ антикармы
+                    case Util::startsWith($text, "/antitop" . $postfix):
+                        Request::sendTyping($chat_id);
+                        if ($isPrivate) {
+                            Request::sendMessage($chat_id, Lang::message("bot.onlyPrivate"));
+                        } else {
+                            $out = $this->service->getAntitop($chat_id, 10);
+
+                            Request::sendHtmlMessage($chat_id, $out);
+                        }
+                        break;
+
                     // своя статистика
                     case Util::startsWith($text, "/mystats" . $postfix):
                         Request::sendTyping($chat_id);

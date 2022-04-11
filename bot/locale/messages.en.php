@@ -12,6 +12,7 @@ Type 'plus' (+ or 👍) for raising or 'minus' (- or 👎) for reducing karma po
 Also I understand messages in format like \"+ @username\" and etc.\r\n
 <b>Commands</b>
 /top - show top of users in current group
+/antitop - show antitop of users in current group
 /mystats - show your global statistics
 /settings - open dialog to change the language and to toggle silent-mode which mute bot comments and cooldown time between user's messages about decrease/increase karma points (admin only)",
 "chat.notallowed" => "This chat is not in the allowed list",
@@ -28,6 +29,10 @@ Also I understand messages in format like \"+ @username\" and etc.\r\n
 "karma.top.row" => ":username (:karma)\r\n",
 "karma.top.firstrow" => "⭐ :username (:karma)\r\n",
 "karma.top.private" => "The Karma's top is available only in groups",
+"karma.antitop.title" => "<b>🏆 Antitop list of Karma owners in the «:chatName»:</b>\r\n\r\n",
+"karma.antitop.row" => ":username (:karma)\r\n",
+"karma.antitop.firstrow" => "💩 :username (:karma)\r\n",
+"karma.antitop.private" => "The Karma's antitop is available only in groups",
 "karma.plus" => "<b>:from (:k1)</b> has given some karma points to <b>:to (:k2)</b>",
 "karma.minus" => "<b>:from (:k1)</b> has taken some karma points from <b>:to (:k2)</b>",
 "karma.yourself" => "Do not do it again, please!",
