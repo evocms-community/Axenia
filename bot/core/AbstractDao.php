@@ -37,7 +37,7 @@ class AbstractDao
     {
         // Try and connect to the database
         if (!isset(self::$connection)) {
-            self::$connection = new mysqli('localhost', MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
+            self::$connection = new mysqli(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
             /* проверка соединения */
             if (self::$connection->connect_errno) {
                 error_log(printf("Error connection: %s\n", self::$connection->connect_error));

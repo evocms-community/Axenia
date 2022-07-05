@@ -5,6 +5,7 @@ define('BOT_NAME', '');
 
 define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
 
+define('MYSQL_HOST', 'localhost');
 define('MYSQL_USER', '');
 define('MYSQL_PASSWORD', '');
 define('MYSQL_DATABASE', '');
