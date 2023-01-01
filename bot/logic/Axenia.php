@@ -51,7 +51,7 @@ class Axenia
     {
         if ($message['chat']['type'] != "channel") {
             if (isset($message['text'])) {
-                return Util::startsWith($message['text'], ["/", "+", "-", '👍', '👎']);
+                return Util::startsWith($message['text'], ["/", "＋", "+", "-", '👍', '👎']);
             }
             if (isset($message['sticker'])) {
                 return Util::startsWith($message['sticker']['emoji'], ['👍', '👎']);
@@ -92,13 +92,13 @@ class Axenia
 
                 switch (true) {
                     // изменить карму
-                    case Util::startsWith($text, ["+", "-", '👍', '👎']):
+                    case Util::startsWith($text, ["＋", "+", "-", '👍', '👎']):
                         if ($isPrivate) {
                             Request::sendMessage($chat_id, Lang::message("bot.onlyPrivate"));
                         } else {
-                            if (preg_match('/^(\+|\-|👍|👎) ?([\s\S]+)?/ui', $text, $matches)) {
+                            if (preg_match('/^(\+|\-|👍|👎|＋) ?([\s\S]+)?/ui', $text, $matches)) {
                                 if ($this->service->checkConditions($from_id, $chat)) {
-                                    $isRise = Util::isInEnum("+,👍", $matches[1]);
+                                    $isRise = Util::isInEnum("＋,+,👍", $matches[1]);
                                     if (isset($message['reply_to_message'])) {
                                         $replyUser = $message['reply_to_message']['from'];
                                         if ($replyUser['username'] != BOT_NAME && !$this->service->isUserBot($replyUser)) {
